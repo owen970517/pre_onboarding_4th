@@ -4,11 +4,9 @@ export interface IData {
     value_bar: number;
 }
 
-export type IResponse = Record<string, IData>;
-
 export interface IChart {
+    time: string;
     id: string;
     value_area: number;
     value_bar: number;
-    time: string;
 }

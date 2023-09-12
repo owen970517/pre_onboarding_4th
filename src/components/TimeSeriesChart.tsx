@@ -1,4 +1,4 @@
-import React, {Dispatch, SetStateAction} from 'react';
+import React from 'react';
 import useChartData from '../hooks/useChartData';
 import {
     Area,
@@ -13,6 +13,7 @@ import {
     YAxis,
 } from 'recharts';
 import CustomTooltip from './CustomTooltip';
+import CustomizedDot from './CustomizedDot';
 
 const TimeSeriesChart = ({
     category,
@@ -21,7 +22,7 @@ const TimeSeriesChart = ({
 }: {
     category: string;
     nowRegion: string;
-    setNowRegion: Dispatch<SetStateAction<string>>;
+    setNowRegion: (value: string) => void;
 }) => {
     const {chartData} = useChartData();
     return (
@@ -89,6 +90,7 @@ const TimeSeriesChart = ({
                         dataKey='value_area'
                         fill='#ff002b'
                         stroke='#ff002b'
+                        dot={<CustomizedDot nowRegion={nowRegion} />}
                     />
                 ) : null}
             </ComposedChart>

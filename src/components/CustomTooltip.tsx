@@ -1,16 +1,7 @@
 import React from 'react';
-import {IChart} from '../types/chart';
+import {TooltipProps} from 'recharts';
 
-interface PayloadType {
-    payload: IChart;
-}
-
-interface CustomProps {
-    active?: boolean;
-    payload?: PayloadType[];
-}
-
-const CustomTooltip = ({active, payload}: CustomProps) => {
+const CustomTooltip = ({active, payload}: TooltipProps<number, string>) => {
     if (active && payload && payload.length)
         return (
             <div className='tooltip'>

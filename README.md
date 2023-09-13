@@ -10,6 +10,11 @@
 
   🔗 https://pre-onboarding-12th-4-zeta.vercel.app
 
+## 실행 화면
+<div align="center" >
+    <img src='https://github.com/owen970517/pre_onboarding_4th/assets/75247323/6f7a990e-41e5-4053-829b-a0443538a638' width='600px' height='600px'/>
+</div>
+
 ## 실행 방법
 
 - git clone https://github.com/owen970517/pre_onboarding_4th.git

@@ -1,7 +1,7 @@
 import React, {useState} from 'react';
-import FilterButton from '../components/FilterButton';
-import FilterCategory from '../components/FilterCategory';
+import FilterCategory from '../components/FilterButton/FilterCategory';
 import TimeSeriesChart from '../components/TimeSeriesChart';
+import FilterRegion from '../components/FilterButton/FilterRegion';
 
 const Home = () => {
     const [nowRegion, setNowRegion] = useState('전체');
@@ -15,7 +15,7 @@ const Home = () => {
                 nowRegion={nowRegion}
                 setNowRegion={setNowRegion}
             />
-            <FilterButton setNowRegion={setNowRegion} nowRegion={nowRegion} />
+            <FilterRegion setNowRegion={setNowRegion} nowRegion={nowRegion} />
         </>
     );
 };

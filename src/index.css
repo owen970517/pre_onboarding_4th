@@ -37,45 +37,7 @@ button:active {
     gap: 0.25rem;
 }
 
-.tooltip {
-    background-color: rgba(255, 255, 255, 0.9);
-    border-radius: 4px;
-}
-
-.tooltip--id {
-    border-bottom: 1px solid #d3d3d3;
-    padding: 1rem;
-}
-
-.tooltip--value-wrapper {
-    padding: 1rem;
-}
-
-.tooltip--value {
-    margin-bottom: 0.25rem;
-}
-
-.value-area {
-    color: #82ca9d;
-}
-
-.value-bar {
-    color: #8884d8;
-}
-
 .recharts-tooltip-wrapper:focus-visible {
     outline: none;
 }
 
-.btn-wrapper {
-    display: flex;
-    gap: 0.5rem;
-}
-
-.btn {
-    background-color: #93c5fd;
-}
-
-.btn-active {
-    background-color: #60a5fa;
-}

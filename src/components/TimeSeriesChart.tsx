@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState} from 'react';
 import useChartData from '../hooks/useChartData';
 import {
     Area,
@@ -12,8 +12,8 @@ import {
     XAxis,
     YAxis,
 } from 'recharts';
-import CustomTooltip from './CustomTooltip';
-import CustomizedDot from './CustomizedDot';
+import CustomTooltip from './Customized/CustomizedTooltip';
+import CustomizedDot from './Customized/CustomizedDot';
 
 const TimeSeriesChart = ({
     category,
@@ -25,6 +25,8 @@ const TimeSeriesChart = ({
     setNowRegion: (value: string) => void;
 }) => {
     const {chartData} = useChartData();
+    const [dot, setDot] = useState('');
+
     return (
         <ResponsiveContainer width='100%' height={500}>
             <ComposedChart
@@ -65,7 +67,7 @@ const TimeSeriesChart = ({
                         offset: -10,
                     }}
                 />
-                <Tooltip content={<CustomTooltip />} />
+                <Tooltip content={<CustomTooltip setDot={setDot} category={category} />} />
                 <Legend height={50} />
                 {category === '전체' || category === 'Bar' ? (
                     <Bar
@@ -90,6 +92,7 @@ const TimeSeriesChart = ({
                         dataKey='value_area'
                         fill='#ff002b'
                         stroke='#ff002b'
+                        onClick={() => setNowRegion(dot)}
                         dot={<CustomizedDot nowRegion={nowRegion} />}
                     />
                 ) : null}
